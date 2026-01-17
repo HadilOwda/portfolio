@@ -84,10 +84,10 @@ export default function ProjectCard({
           whileHover={{ opacity: 1 }}
           transition={{ duration: 0.2 }}
         >
-          <h3 className="text-2xl md:text-3xl font-bold text-[#e5e5e5] mb-3 drop-shadow-[0_0_12px_rgba(59,130,246,0.6)]">
+          <h3 className="text-2xl md:text-3xl font-bold text-[#e5e5e5] mb-3 drop-shadow-[0_0_12px_rgba(59,130,246,0.6)]" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
             {name}
           </h3>
-          <p className="text-[#e5e5e5]/90 text-base md:text-lg">{description}</p>
+          <p className="text-[#e5e5e5]/90 text-base md:text-lg" style={{ fontFamily: 'var(--font-dm-sans)' }}>{description}</p>
         </motion.div>
         <motion.div
           className="absolute inset-0 border-2 border-transparent rounded-lg pointer-events-none"

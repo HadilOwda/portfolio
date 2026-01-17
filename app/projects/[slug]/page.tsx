@@ -24,6 +24,7 @@ export default function ProjectPage() {
   const isBigGame = slug === "bare-metal-graphics-pipeline";
   const isResearchProject = project.category === "Research";
   const isFPGA = slug === "fpga-music-synthesizer";
+  const isWorldInJar = slug === "world-in-a-jar";
 
   // Extract YouTube video ID from URL
   const getYouTubeVideoId = (url: string): string => {
@@ -35,7 +36,7 @@ export default function ProjectPage() {
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-[#e5e5e5] pt-16">
       {/* Hero Image or Video */}
-      <div className="w-full h-[60vh] md:h-[70vh] relative bg-[#0a0a0a] flex items-center justify-center">
+      <div className={`w-full h-[60vh] md:h-[70vh] relative ${isWorldInJar ? "bg-[#000000]" : "bg-[#0a0a0a]"} flex items-center justify-center`}>
         {project.heroVideo ? (
           <VideoPlayer
             src={project.heroVideo}
@@ -51,7 +52,7 @@ export default function ProjectPage() {
               src={project.heroImage}
               alt={project.name}
               fill
-              className={isBigGame || isResearchProject || isFPGA ? "object-contain" : "object-contain md:object-cover"}
+              className={isBigGame || isResearchProject || isFPGA || isWorldInJar ? "object-contain" : "object-contain md:object-cover"}
               priority
               sizes="100vw"
             />
@@ -76,27 +77,27 @@ export default function ProjectPage() {
         )}
         {/* Category Tag */}
         <div className="mb-6">
-          <span className="inline-block px-4 py-2 bg-[#3b82f6]/20 border border-[#3b82f6]/40 text-[#3b82f6] rounded-full text-sm md:text-base font-medium">
+          <span className="inline-block px-4 py-2 bg-[#3b82f6]/20 border border-[#3b82f6]/40 text-[#3b82f6] rounded-full text-sm md:text-base font-medium" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
             {project.category}
           </span>
         </div>
 
         {/* Title and Tagline */}
         <div className="mb-10">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#e5e5e5] mb-6">
+          <h1 className="text-6xl font-bold text-[#e5e5e5] mb-6 tracking-wide" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
             {project.name}
           </h1>
-          <p className="text-2xl md:text-3xl text-[#e5e5e5]/90 font-light italic">
+          <p className="text-xl md:text-2xl text-[#94a3b8] font-light leading-relaxed" style={{ fontFamily: 'var(--font-dm-sans)' }}>
             {project.tagline}
           </p>
         </div>
 
         {/* Role */}
         <div className="mb-8">
-          <h3 className="text-lg md:text-xl font-semibold text-[#e5e5e5] mb-2">Role</h3>
-          <p className="text-lg md:text-xl text-[#e5e5e5]/80">{project.role}</p>
+          <h3 className="text-lg md:text-xl font-semibold text-[#e5e5e5] mb-2" style={{ fontFamily: 'var(--font-space-grotesk)' }}>Role</h3>
+          <p className="text-base md:text-lg text-[#e5e5e5]/80 leading-relaxed" style={{ fontFamily: 'var(--font-dm-sans)' }}>{project.role}</p>
           {project.status && (
-            <p className="text-base md:text-lg text-[#3b82f6] mt-2 italic">{project.status}</p>
+            <p className="text-base md:text-lg text-[#3b82f6] mt-2 italic" style={{ fontFamily: 'var(--font-dm-sans)' }}>{project.status}</p>
           )}
         </div>
 
@@ -107,7 +108,8 @@ export default function ProjectPage() {
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center text-[#3b82f6] hover:text-[#60a5fa] transition-all duration-200 font-medium text-lg hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.5)]"
+              className="inline-flex items-center text-[#14b8a6] hover:text-[#5eead4] underline underline-offset-4 transition-all duration-200 font-medium text-lg hover:drop-shadow-[0_0_8px_rgba(20,184,166,0.5)]"
+              style={{ fontFamily: 'var(--font-dm-sans)' }}
             >
               <svg
                 className="w-5 h-5 mr-2"
@@ -126,14 +128,15 @@ export default function ProjectPage() {
           </div>
         )}
 
-        {/* PDF Link for Fiona */}
+        {/* PDF Link */}
         {project.pdf && (
           <div className="mb-10">
             <Link
               href={project.pdf}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center text-[#3b82f6] hover:text-[#60a5fa] transition-all duration-200 font-medium text-lg hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.5)]"
+              className="inline-flex items-center text-[#14b8a6] hover:text-[#5eead4] underline underline-offset-4 transition-all duration-200 font-medium text-lg hover:drop-shadow-[0_0_8px_rgba(20,184,166,0.5)]"
+              style={{ fontFamily: 'var(--font-dm-sans)' }}
             >
               <svg
                 className="w-5 h-5 mr-2"
@@ -148,21 +151,21 @@ export default function ProjectPage() {
                   d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"
                 />
               </svg>
-              View PDF Book
+              {isWorldInJar ? "View Full Project Report (PDF)" : "View PDF Book"}
             </Link>
           </div>
         )}
 
         {/* Main Description */}
         <div className="mb-14 md:mb-18">
-          <p className="text-xl md:text-2xl text-[#e5e5e5]/80 leading-relaxed whitespace-pre-line">
+          <p className="text-base md:text-lg text-[#e5e5e5]/80 leading-relaxed whitespace-pre-line" style={{ fontFamily: 'var(--font-dm-sans)' }}>
             {project.description}
           </p>
         </div>
 
         {/* Tech Stack */}
         <section className="mb-14 md:mb-18">
-          <h2 className="text-3xl md:text-4xl font-semibold text-[#e5e5e5] mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#e5e5e5] mb-8" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
             Tech Stack
           </h2>
           <div className="flex flex-wrap gap-3">
@@ -170,6 +173,7 @@ export default function ProjectPage() {
               <span
                 key={tech}
                 className="px-5 py-2.5 bg-[#3b82f6]/20 border border-[#3b82f6]/40 text-[#3b82f6] rounded-full text-base md:text-lg font-medium hover:bg-[#3b82f6]/30 hover:border-[#3b82f6]/60 hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.4)] transition-all duration-200"
+                style={{ fontFamily: 'var(--font-dm-sans)' }}
               >
                 {tech}
               </span>
@@ -180,42 +184,50 @@ export default function ProjectPage() {
         {/* Gallery */}
         {project.galleryItems.length > 0 && (
           <section className="mb-14 md:mb-18">
-            <h2 className="text-3xl md:text-4xl font-semibold text-[#e5e5e5] mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#e5e5e5] mb-8" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
               Gallery
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-              {project.galleryItems.map((item, index) => (
-                <div
-                  key={index}
-                  className="relative aspect-video w-full overflow-hidden rounded-lg border border-gray-800/50 hover:border-[#3b82f6]/40 hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.2)] transition-all duration-200"
-                >
-                  {item.type === "image" ? (
-                    <div
-                      className="relative w-full h-full cursor-pointer"
-                      onClick={() =>
-                        setLightboxImage({
-                          src: item.src,
-                          alt: item.alt || `${project.name} gallery image ${index + 1}`,
-                        })
-                      }
-                    >
-                      <Image
-                        src={item.src}
-                        alt={item.alt || `${project.name} gallery image ${index + 1}`}
-                        fill
-                        className="object-cover"
-                        loading="lazy"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      />
-                    </div>
-                  ) : item.type === "video" ? (
+              {project.galleryItems.map((item, index) => {
+                const isWorldInJarImage = isWorldInJar && item.type === "image";
+                
+                return (
+                  <div
+                    key={index}
+                    className="relative aspect-video w-full overflow-hidden rounded-lg border border-gray-800/50 hover:border-[#3b82f6]/40 hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.2)] transition-all duration-200"
+                  >
+                    {item.type === "image" ? (
+                      <div
+                        className={`relative w-full h-full cursor-pointer overflow-hidden group ${
+                          isWorldInJarImage ? "bg-[#000000]" : ""
+                        }`}
+                        onClick={() =>
+                          setLightboxImage({
+                            src: item.src,
+                            alt: item.alt || `${project.name} gallery image ${index + 1}`,
+                          })
+                        }
+                      >
+                        <Image
+                          src={item.src}
+                          alt={item.alt || `${project.name} gallery image ${index + 1}`}
+                          fill
+                          className={`transition-transform duration-300 group-hover:scale-105 group-hover:brightness-110 ${
+                            isWorldInJarImage ? "object-contain" : "object-cover"
+                          }`}
+                          loading="lazy"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        />
+                      </div>
+                    ) : item.type === "video" ? (
                     <VideoPlayer
                       src={item.src}
                       alt={item.alt || `${project.name} gallery video ${index + 1}`}
                       className="h-full"
                       muted={true}
                       controls={true}
-                      autoplay={false}
+                      autoplay={isWorldInJar && index === 0}
+                      loop={isWorldInJar && index === 0}
                       noAudio={isBigGame} // Completely remove audio capability for Big Game videos
                     />
                   ) : item.type === "pdf" ? (
@@ -227,7 +239,7 @@ export default function ProjectPage() {
                     >
                       <div className="flex flex-col items-center justify-center p-6">
                         <svg
-                          className="w-16 h-16 mb-4 text-[#3b82f6]"
+                          className="w-16 h-16 mb-4 text-[#14b8a6]"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -248,8 +260,9 @@ export default function ProjectPage() {
                       </div>
                     </a>
                   ) : null}
-                </div>
-              ))}
+                  </div>
+                );
+              })}
             </div>
           </section>
         )}
@@ -268,7 +281,8 @@ export default function ProjectPage() {
         <div className="pt-8 border-t border-gray-800/50">
           <Link
             href="/projects"
-            className="inline-flex items-center text-[#e5e5e5]/80 hover:text-[#3b82f6] transition-all duration-200 font-medium text-lg hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.5)]"
+            className="inline-flex items-center text-[#e5e5e5]/80 hover:text-[#14b8a6] transition-all duration-200 font-medium text-lg hover:drop-shadow-[0_0_8px_rgba(20,184,166,0.5)]"
+            style={{ fontFamily: 'var(--font-dm-sans)' }}
           >
             <svg
               className="w-5 h-5 mr-2"

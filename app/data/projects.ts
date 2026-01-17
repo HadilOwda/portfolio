@@ -32,32 +32,33 @@ export const projects: Project[] = [
     techStack: ["Blender", "Cycles Renderer"],
     galleryItems: [
       {
+        type: "video",
+        src: "/projects/world in a jar/CS148 Final/jar_output.mp4",
+        alt: "World in a Jar - 360° turntable video",
+      },
+      {
         type: "image",
-        src: "/projects/world in a jar/CS148 Final/Final_Render_1000s.png",
+        src: "/projects/world in a jar/CS148 Final/hadilo12.png",
         alt: "Final render of World in a Jar",
       },
       {
         type: "image",
-        src: "/projects/world in a jar/CS148 Final/Screenshot 2025-12-11 at 1.23.41 PM.png",
-        alt: "World in a Jar screenshot",
+        src: "/projects/world in a jar/CS148 Final/hadilo12_b.png",
+        alt: "World in a Jar - alternate angle",
       },
       {
         type: "image",
-        src: "/projects/world in a jar/CS148 Final/Screenshot 2025-12-11 at 11.50.01 AM.png",
-        alt: "World in a Jar screenshot",
+        src: "/projects/world in a jar/CS148 Final/progress1.png",
+        alt: "World in a Jar - WIP progress 1",
       },
       {
         type: "image",
-        src: "/projects/world in a jar/CS148 Final/Screenshot 2025-12-09 at 9.41.05 PM.png",
-        alt: "World in a Jar screenshot",
-      },
-      {
-        type: "image",
-        src: "/projects/world in a jar/CS148 Final/Screenshot 2025-12-10 at 12.11.33 AM.png",
-        alt: "World in a Jar screenshot",
+        src: "/projects/world in a jar/CS148 Final/progress2.png",
+        alt: "World in a Jar - WIP progress 2",
       },
     ],
     role: "Solo project - 3D modeling, lighting, materials, composition",
+    pdf: "/projects/world in a jar/CS148 Final/hadilo12.pdf",
     category: "Visual & Narrative",
   },
   {
@@ -72,7 +73,6 @@ export const projects: Project[] = [
     galleryItems: [],
     role: "Writer, Director, Cinematographer, Editor, Actor, Voice Artist",
     category: "Visual & Narrative",
-    status: "Currently in post-production",
   },
   {
     slug: "bare-metal-graphics-pipeline",
@@ -82,23 +82,7 @@ export const projects: Project[] = [
       "Stanford vs. Cal themed Space Invaders game built on bare-metal RISC-V system. As the Cardinal Tree, defend against Cal Bears shooting 'C's while firing back with '+' bullets. Race against a 30-second clock to outscore Berkeley and break Stanford's losing streak. Implemented custom graphics pipeline with framebuffer double-buffering, sprite rendering via memory-mapped I/O, and optimized pixel routines achieving 60fps on resource-constrained hardware.",
     heroImage: "/projects/big game/cover.png",
     techStack: ["C", "Assembly", "RISC-V", "Mango Pi"],
-    galleryItems: [
-      {
-        type: "video",
-        src: "/projects/big game/cs107e-proj2.MOV",
-        alt: "The Big Game gameplay video 2",
-      },
-      {
-        type: "video",
-        src: "/projects/big game/cs107e-proj3.MOV",
-        alt: "The Big Game gameplay video 3",
-      },
-      {
-        type: "video",
-        src: "/projects/big game/cs107e-proj4.MOV",
-        alt: "The Big Game gameplay video 4",
-      },
-    ],
+    galleryItems: [],
     role: "Two-person team - Led graphics implementation (rendering pipeline, framebuffers, sprite system); collaborated on OS development",
     github: "https://github.com/ahmadzafar-code/Stanfordspaceinvadersgame",
     category: "Systems & Engineering",
@@ -114,26 +98,32 @@ export const projects: Project[] = [
     galleryItems: [
       {
         type: "image",
-        src: "/projects/ray_tracer/img-1.07-first-diffuse.png",
-        alt: "Ray tracer - first diffuse rendering",
+        src: "/projects/ray_tracer/progress0.JPG",
+        alt: "Ray tracer - progress 0",
       },
       {
         type: "image",
-        src: "/projects/ray_tracer/img-1.10-correct-lambertian.png",
-        alt: "Ray tracer - correct Lambertian shading",
+        src: "/projects/ray_tracer/progress1.JPG",
+        alt: "Ray tracer - progress 1",
       },
       {
         type: "image",
-        src: "/projects/ray_tracer/Image 1-11-26 at 8.38 PM.JPG",
-        alt: "Ray tracer progression image",
+        src: "/projects/ray_tracer/progress2.png",
+        alt: "Ray tracer - progress 2",
       },
       {
         type: "image",
-        src: "/projects/ray_tracer/Image 1-11-26 at 9.34 PM.JPG",
-        alt: "Ray tracer final rendering",
+        src: "/projects/ray_tracer/progress3.png",
+        alt: "Ray tracer - progress 3",
+      },
+      {
+        type: "image",
+        src: "/projects/ray_tracer/final_render.png",
+        alt: "Ray tracer - final render",
       },
     ],
     role: "Solo project",
+    github: "https://github.com/HadilOwda/ray-tracer",
     category: "Systems & Engineering",
   },
   {

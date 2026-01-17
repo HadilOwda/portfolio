@@ -12,7 +12,7 @@ export default function About() {
           
           <div className="relative">
             {/* Photo - Top right, floating */}
-            <div className="float-right ml-8 mb-8 w-48 h-48 md:w-56 md:h-56 shrink-0">
+            <div className="float-right ml-8 mb-8 w-64 h-64 md:w-72 md:h-72 shrink-0">
               <div className="relative w-full h-full rounded-full overflow-hidden shadow-[0_8px_32px_rgba(20,184,166,0.2)] ring-2 ring-[#14b8a6]/20">
                 <Image
                   src="/projects/me/me.png"
@@ -20,7 +20,7 @@ export default function About() {
                   fill
                   className="object-cover"
                   priority
-                  sizes="(max-width: 768px) 192px, 224px"
+                  sizes="(max-width: 768px) 256px, 288px"
                 />
               </div>
             </div>
@@ -28,36 +28,37 @@ export default function About() {
             {/* Text content */}
             <div className="space-y-6 text-[#e5e5e5]/90 text-lg md:text-xl leading-relaxed" style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>
               <p>
-                Hi! I'm Hadil, an Electrical Engineering undergraduate at Stanford on the hardware and software track. I'm also completing a coterminal Master's in Computer Science with a focus on graphics and visual computing.
+                Hi! I'm Hadil, a junior at Stanford studying Electrical Engineering with a focus on graphics and visual computing. I'm also doing a coterm Master's in Computer Graphics.
               </p>
               
               <p>
-                I like working on compelling systems engineering projects that either tell a story themselves or help others convey their stories better. I generally love creative tech and anything at the intersection of technology and art—whether that's building graphics pipelines, creating 3D environments, or directing short films.
-              </p>
-              
-              <p>
-                Currently, I work with Stanford's Human-Centered AI Institute as an open-source engineering intern—you can read some of our work{" "}
+                I love building things that sit at the intersection of technology and creativity—whether that's rendering engines, short films, or games built from scratch. Right now, I'm working as an open-source engineering intern at{" "}
                 <Link
                   href="https://opensource.stanford.edu"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#14b8a6] hover:text-[#5eead4] underline underline-offset-4 transition-colors duration-200 hover:drop-shadow-[0_0_8px_rgba(20,184,166,0.5)]"
                 >
-                  here
+                  Stanford's Human-Centered AI Institute
+                </Link>
+                {" "}as well as taking computer graphics (CS248A), systems design (EE180), and 3D art (ARTSTUDI162A) classes! I've previously worked on ML benchmarking platforms research at the Brains in Silicon Lab (check projects!) and marketing analytics infrastructure at{" "}
+                <Link
+                  href="https://tinuiti.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#14b8a6] hover:text-[#5eead4] underline underline-offset-4 transition-colors duration-200 hover:drop-shadow-[0_0_8px_rgba(20,184,166,0.5)]"
+                >
+                  Tinuiti
                 </Link>
                 .
               </p>
               
               <p>
-                In the past, I've worked on DynaDojo, an ML benchmarking platform, as part of my research with the Brains in Silicon lab. I also interned at Tinuiti, the largest independent full-funnel marketing agency in the US, building cross-client analytics dashboards on the product engineering team. Last spring, I helped assistant direct Stanford's spring musical (Legally Blonde)—very fun!
-              </p>
-              
-              <p>
-                I'm passionate about computer graphics, rendering, and animation pipelines, plus the sweet spot where low-level systems meet creative applications. When I'm not coding, you might find me working on film projects, storytelling, or exploring technical art—all ways I like to blend engineering with creative expression.
+                When I'm not coding or creating, you'll find me working on personal film projects, watching movies, reading, or exploring the Bay Area with friends (just like in the photo!).
               </p>
 
-              <p className="pt-4">
-                Thanks for stopping by! Feel free to reach out if you want to chat about any of this.
+              <p>
+                Feel free to reach out—I'm always up for chatting about graphics, animation, or any creative tech projects!
               </p>
             </div>
           </div>
