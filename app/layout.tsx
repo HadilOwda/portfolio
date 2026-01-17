@@ -28,8 +28,8 @@ const fredoka = Fredoka({
 });
 
 export const metadata: Metadata = {
-  title: "Hadil - Technical Director + Storyteller",
-  description: "Portfolio of Hadil - Technical Director + Storyteller",
+  title: "Hadil Owda",
+  description: "Building at the intersection of code and creativity",
 };
 
 export default function RootLayout({
