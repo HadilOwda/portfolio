@@ -52,12 +52,12 @@ export default function VideoPlayer({
   }, [noAudio]);
 
   return (
-    <div className={`relative w-full ${className}`}>
+    <div className={`relative w-full max-w-full ${className}`}>
       <video
         ref={videoRef}
         src={src}
         controls={controls}
-        className={`w-full h-full rounded-lg ${noAudio ? "video-no-audio-controls" : ""}`}
+        className={`w-full h-full max-w-full rounded-lg ${noAudio ? "video-no-audio-controls" : ""}`}
         autoPlay={autoplay}
         loop={loop}
         muted={muted || noAudio}

@@ -78,16 +78,16 @@ export default function ProjectCard({
           />
         )}
         <motion.div
-          className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center"
+          className="absolute inset-0 flex flex-col items-center justify-center p-4 sm:p-6 text-center"
           style={{ backgroundColor: "rgba(0,0,0,0.75)" }}
           initial={{ opacity: 0 }}
           whileHover={{ opacity: 1 }}
           transition={{ duration: 0.2 }}
         >
-          <h3 className="text-2xl md:text-3xl font-bold text-[#e5e5e5] mb-3 drop-shadow-[0_0_12px_rgba(59,130,246,0.6)]" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#e5e5e5] mb-2 sm:mb-3 drop-shadow-[0_0_12px_rgba(59,130,246,0.6)] px-2" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
             {name}
           </h3>
-          <p className="text-[#e5e5e5]/90 text-base md:text-lg" style={{ fontFamily: 'var(--font-dm-sans)' }}>{description}</p>
+          <p className="text-[#e5e5e5]/90 text-sm sm:text-base md:text-lg px-2" style={{ fontFamily: 'var(--font-dm-sans)' }}>{description}</p>
         </motion.div>
         <motion.div
           className="absolute inset-0 border-2 border-transparent rounded-lg pointer-events-none"

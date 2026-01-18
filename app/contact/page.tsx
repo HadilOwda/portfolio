@@ -5,19 +5,19 @@ export default function Contact() {
     <div className="min-h-screen bg-[#1a1625] text-[#e5e5e5] pt-16">
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <section className="max-w-4xl mx-auto text-center">
-          <h1 className="text-6xl font-bold text-[#e5e5e5] mb-6" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#e5e5e5] mb-4 md:mb-6" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
             Let's Connect
           </h1>
           
-          <p className="text-xl md:text-2xl text-[#e5e5e5]/80 mb-16 leading-relaxed" style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>
+          <p className="text-lg sm:text-xl md:text-2xl text-[#e5e5e5]/80 mb-10 md:mb-16 leading-relaxed px-4" style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>
             Feel free to reach out! I'm always open to discussing new projects, creative ideas, or opportunities.
           </p>
 
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8">
+          <div className="flex flex-col md:flex-row items-stretch md:items-center justify-center gap-4 md:gap-6 lg:gap-8 px-4">
             {/* Email */}
             <a
               href="mailto:hadilo12@stanford.edu"
-              className="flex items-center gap-4 px-8 py-4 bg-gray-800/30 hover:bg-gray-800/50 border border-gray-700/50 hover:border-[#14b8a6]/50 rounded-lg transition-all duration-200 hover:drop-shadow-[0_0_12px_rgba(20,184,166,0.3)] group"
+              className="flex items-center justify-center gap-3 md:gap-4 px-6 md:px-8 py-4 bg-gray-800/30 hover:bg-gray-800/50 border border-gray-700/50 hover:border-[#14b8a6]/50 rounded-lg transition-all duration-200 hover:drop-shadow-[0_0_12px_rgba(20,184,166,0.3)] group min-h-[44px]"
             >
               <svg
                 className="w-6 h-6 text-[#14b8a6] group-hover:scale-110 transition-transform duration-200"
@@ -32,7 +32,7 @@ export default function Contact() {
                   d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                 />
               </svg>
-              <span className="text-xl md:text-2xl text-[#14b8a6] group-hover:text-[#5eead4] transition-colors duration-200">
+              <span className="text-base sm:text-lg md:text-xl lg:text-2xl text-[#14b8a6] group-hover:text-[#5eead4] transition-colors duration-200">
                 hadilo12@stanford.edu
               </span>
             </a>
@@ -42,7 +42,7 @@ export default function Contact() {
               href="https://www.linkedin.com/in/hadil-owda/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-4 px-8 py-4 bg-gray-800/30 hover:bg-gray-800/50 border border-gray-700/50 hover:border-[#14b8a6]/50 rounded-lg transition-all duration-200 hover:drop-shadow-[0_0_12px_rgba(20,184,166,0.3)] group"
+              className="flex items-center justify-center gap-3 md:gap-4 px-6 md:px-8 py-4 bg-gray-800/30 hover:bg-gray-800/50 border border-gray-700/50 hover:border-[#14b8a6]/50 rounded-lg transition-all duration-200 hover:drop-shadow-[0_0_12px_rgba(20,184,166,0.3)] group min-h-[44px]"
             >
               <svg
                 className="w-6 h-6 text-[#14b8a6] group-hover:scale-110 transition-transform duration-200"
@@ -51,7 +51,7 @@ export default function Contact() {
               >
                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
               </svg>
-              <span className="text-xl md:text-2xl text-[#14b8a6] group-hover:text-[#5eead4] transition-colors duration-200">
+              <span className="text-base sm:text-lg md:text-xl lg:text-2xl text-[#14b8a6] group-hover:text-[#5eead4] transition-colors duration-200">
                 LinkedIn
               </span>
             </Link>
@@ -61,7 +61,7 @@ export default function Contact() {
               href="https://github.com/HadilOwda"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-4 px-8 py-4 bg-gray-800/30 hover:bg-gray-800/50 border border-gray-700/50 hover:border-[#14b8a6]/50 rounded-lg transition-all duration-200 hover:drop-shadow-[0_0_12px_rgba(20,184,166,0.3)] group"
+              className="flex items-center justify-center gap-3 md:gap-4 px-6 md:px-8 py-4 bg-gray-800/30 hover:bg-gray-800/50 border border-gray-700/50 hover:border-[#14b8a6]/50 rounded-lg transition-all duration-200 hover:drop-shadow-[0_0_12px_rgba(20,184,166,0.3)] group min-h-[44px]"
             >
               <svg
                 className="w-6 h-6 text-[#14b8a6] group-hover:scale-110 transition-transform duration-200"
@@ -74,7 +74,7 @@ export default function Contact() {
                   clipRule="evenodd"
                 />
               </svg>
-              <span className="text-xl md:text-2xl text-[#14b8a6] group-hover:text-[#5eead4] transition-colors duration-200">
+              <span className="text-base sm:text-lg md:text-xl lg:text-2xl text-[#14b8a6] group-hover:text-[#5eead4] transition-colors duration-200">
                 GitHub
               </span>
             </Link>

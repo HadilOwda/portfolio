@@ -36,7 +36,7 @@ export default function ProjectPage() {
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-[#e5e5e5] pt-16">
       {/* Hero Image or Video */}
-      <div className={`w-full h-[60vh] md:h-[70vh] relative ${isWorldInJar ? "bg-[#000000]" : "bg-[#0a0a0a]"} flex items-center justify-center`}>
+      <div className={`w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] relative ${isWorldInJar ? "bg-[#000000]" : "bg-[#0a0a0a]"} flex items-center justify-center`}>
         {project.heroVideo ? (
           <VideoPlayer
             src={project.heroVideo}
@@ -60,10 +60,10 @@ export default function ProjectPage() {
         ) : null}
       </div>
 
-      <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+      <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
         {/* YouTube Video Embed */}
         {project.youtubeUrl && (
-          <div className="mb-12 md:mb-16 flex justify-center">
+          <div className="mb-10 sm:mb-12 md:mb-16 flex justify-center px-4">
             <div className="w-full max-w-[900px] aspect-video rounded-lg overflow-hidden border border-gray-800/50">
               <iframe
                 src={`https://www.youtube.com/embed/${getYouTubeVideoId(project.youtubeUrl)}`}
@@ -83,32 +83,32 @@ export default function ProjectPage() {
         </div>
 
         {/* Title and Tagline */}
-        <div className="mb-10">
-          <h1 className="text-6xl font-bold text-[#e5e5e5] mb-6 tracking-wide" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
+        <div className="mb-8 md:mb-10">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#e5e5e5] mb-4 md:mb-6 tracking-wide" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
             {project.name}
           </h1>
-          <p className="text-xl md:text-2xl text-[#94a3b8] font-light leading-relaxed" style={{ fontFamily: 'var(--font-dm-sans)' }}>
+          <p className="text-lg sm:text-xl md:text-2xl text-[#94a3b8] font-light leading-relaxed" style={{ fontFamily: 'var(--font-dm-sans)' }}>
             {project.tagline}
           </p>
         </div>
 
         {/* Role */}
-        <div className="mb-8">
-          <h3 className="text-lg md:text-xl font-semibold text-[#e5e5e5] mb-2" style={{ fontFamily: 'var(--font-space-grotesk)' }}>Role</h3>
-          <p className="text-base md:text-lg text-[#e5e5e5]/80 leading-relaxed" style={{ fontFamily: 'var(--font-dm-sans)' }}>{project.role}</p>
+        <div className="mb-6 md:mb-8">
+          <h3 className="text-base sm:text-lg md:text-xl font-semibold text-[#e5e5e5] mb-2" style={{ fontFamily: 'var(--font-space-grotesk)' }}>Role</h3>
+          <p className="text-sm sm:text-base md:text-lg text-[#e5e5e5]/80 leading-relaxed" style={{ fontFamily: 'var(--font-dm-sans)' }}>{project.role}</p>
           {project.status && (
-            <p className="text-base md:text-lg text-[#3b82f6] mt-2 italic" style={{ fontFamily: 'var(--font-dm-sans)' }}>{project.status}</p>
+            <p className="text-sm sm:text-base md:text-lg text-[#3b82f6] mt-2 italic" style={{ fontFamily: 'var(--font-dm-sans)' }}>{project.status}</p>
           )}
         </div>
 
         {/* GitHub Link */}
         {project.github && (
-          <div className="mb-10">
+          <div className="mb-8 md:mb-10">
             <Link
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center text-[#14b8a6] hover:text-[#5eead4] underline underline-offset-4 transition-all duration-200 font-medium text-lg hover:drop-shadow-[0_0_8px_rgba(20,184,166,0.5)]"
+              className="inline-flex items-center text-[#14b8a6] hover:text-[#5eead4] underline underline-offset-4 transition-all duration-200 font-medium text-base md:text-lg min-h-[44px] hover:drop-shadow-[0_0_8px_rgba(20,184,166,0.5)]"
               style={{ fontFamily: 'var(--font-dm-sans)' }}
             >
               <svg
@@ -130,12 +130,12 @@ export default function ProjectPage() {
 
         {/* PDF Link */}
         {project.pdf && (
-          <div className="mb-10">
+          <div className="mb-8 md:mb-10">
             <Link
               href={project.pdf}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center text-[#14b8a6] hover:text-[#5eead4] underline underline-offset-4 transition-all duration-200 font-medium text-lg hover:drop-shadow-[0_0_8px_rgba(20,184,166,0.5)]"
+              className="inline-flex items-center text-[#14b8a6] hover:text-[#5eead4] underline underline-offset-4 transition-all duration-200 font-medium text-base md:text-lg min-h-[44px] hover:drop-shadow-[0_0_8px_rgba(20,184,166,0.5)]"
               style={{ fontFamily: 'var(--font-dm-sans)' }}
             >
               <svg
@@ -157,22 +157,22 @@ export default function ProjectPage() {
         )}
 
         {/* Main Description */}
-        <div className="mb-14 md:mb-18">
-          <p className="text-base md:text-lg text-[#e5e5e5]/80 leading-relaxed whitespace-pre-line" style={{ fontFamily: 'var(--font-dm-sans)' }}>
+        <div className="mb-10 sm:mb-12 md:mb-14 lg:mb-18">
+          <p className="text-sm sm:text-base md:text-lg text-[#e5e5e5]/80 leading-relaxed whitespace-pre-line" style={{ fontFamily: 'var(--font-dm-sans)' }}>
             {project.description}
           </p>
         </div>
 
         {/* Tech Stack */}
-        <section className="mb-14 md:mb-18">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#e5e5e5] mb-8" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
+        <section className="mb-12 md:mb-14 lg:mb-18">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#e5e5e5] mb-6 md:mb-8" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
             Tech Stack
           </h2>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-2 md:gap-3">
             {project.techStack.map((tech) => (
               <span
                 key={tech}
-                className="px-5 py-2.5 bg-[#3b82f6]/20 border border-[#3b82f6]/40 text-[#3b82f6] rounded-full text-base md:text-lg font-medium hover:bg-[#3b82f6]/30 hover:border-[#3b82f6]/60 hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.4)] transition-all duration-200"
+                className="px-4 py-2 md:px-5 md:py-2.5 bg-[#3b82f6]/20 border border-[#3b82f6]/40 text-[#3b82f6] rounded-full text-sm md:text-base lg:text-lg font-medium hover:bg-[#3b82f6]/30 hover:border-[#3b82f6]/60 hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.4)] transition-all duration-200 min-h-[44px] flex items-center"
                 style={{ fontFamily: 'var(--font-dm-sans)' }}
               >
                 {tech}
@@ -183,11 +183,11 @@ export default function ProjectPage() {
 
         {/* Gallery */}
         {project.galleryItems.length > 0 && (
-          <section className="mb-14 md:mb-18">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#e5e5e5] mb-8" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
+          <section className="mb-12 md:mb-14 lg:mb-18">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#e5e5e5] mb-6 md:mb-8" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
               Gallery
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 lg:gap-6">
               {project.galleryItems.map((item, index) => {
                 const isWorldInJarImage = isWorldInJar && item.type === "image";
                 
@@ -278,10 +278,10 @@ export default function ProjectPage() {
         )}
 
         {/* Back to Projects Link */}
-        <div className="pt-8 border-t border-gray-800/50">
+        <div className="pt-6 md:pt-8 border-t border-gray-800/50">
           <Link
             href="/projects"
-            className="inline-flex items-center text-[#e5e5e5]/80 hover:text-[#14b8a6] transition-all duration-200 font-medium text-lg hover:drop-shadow-[0_0_8px_rgba(20,184,166,0.5)]"
+            className="inline-flex items-center text-[#e5e5e5]/80 hover:text-[#14b8a6] transition-all duration-200 font-medium text-base md:text-lg min-h-[44px] hover:drop-shadow-[0_0_8px_rgba(20,184,166,0.5)]"
             style={{ fontFamily: 'var(--font-dm-sans)' }}
           >
             <svg
