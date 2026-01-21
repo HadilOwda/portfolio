@@ -41,7 +41,7 @@ export default function About() {
                 >
                   Stanford's Human-Centered AI Institute
                 </Link>
-                {" "}as well as taking computer graphics (CS248A), systems design (EE180), and 3D art (ARTSTUDI162A) classes! I've previously worked on ML benchmarking platforms research at the Brains in Silicon Lab (check projects!) and marketing analytics infrastructure at{" "}
+                {" "}as well as taking computer graphics (CS248A), systems design (EE180), and 3D art (ARTSTUDI162A) classes! Last spring, I also assistant directed Stanford's production of Legally Blonde—bringing together storytelling, production design, and collaboration in a totally different medium. I've previously worked on ML benchmarking platforms research at the Brains in Silicon Lab (check projects!) and marketing analytics infrastructure at{" "}
                 <Link
                   href="https://tinuiti.com"
                   target="_blank"
