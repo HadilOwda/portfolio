@@ -40,52 +40,12 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Demo Reel Section */}
-        <section className="mb-24 md:mb-32 lg:mb-48">
-          <div className="max-w-4xl mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-              className="flex items-center justify-center gap-2 md:gap-3 mb-8 md:mb-16"
-            >
-              <span className="text-xl sm:text-2xl md:text-3xl text-[#14b8a6]">✨</span>
-              <h2
-                style={{ 
-                  fontFamily: "var(--font-fredoka)",
-                  textShadow: "4px 4px 0px rgba(20,184,166,0.3), 2px 2px 0px rgba(148,163,184,0.2)"
-                }}
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-[#e5e5e5]"
-              >
-                DEMO REEL
-              </h2>
-              <span className="text-xl sm:text-2xl md:text-3xl text-[#14b8a6]">✨</span>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-              className="w-full max-w-[900px] mx-auto aspect-video rounded-lg overflow-hidden shadow-[0_0_30px_rgba(20,184,166,0.2)]"
-            >
-              <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/to4qxyxufh4"
-                title="Demo Reel"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              />
-            </motion.div>
-          </div>
-        </section>
-
         {/* Featured Projects Section */}
         <section className="mb-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
+            transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
             className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-12 md:mb-16 px-4"
           >
             <h2 style={{ fontFamily: "var(--font-space-grotesk)" }} className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#e5e5e5] tracking-wide">
@@ -105,7 +65,7 @@ export default function Home() {
                 key={project.slug}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 + index * 0.1, ease: "easeOut" }}
+                transition={{ duration: 0.6, delay: 0.4 + index * 0.1, ease: "easeOut" }}
               >
                 <ProjectCard
                   slug={project.slug}
@@ -115,6 +75,46 @@ export default function Home() {
                 />
               </motion.div>
             ))}
+          </div>
+        </section>
+
+        {/* Demo Reel Section */}
+        <section className="mb-24 md:mb-32 lg:mb-48">
+          <div className="max-w-4xl mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.7, ease: "easeOut" }}
+              className="flex items-center justify-center gap-2 md:gap-3 mb-8 md:mb-16"
+            >
+              <span className="text-xl sm:text-2xl md:text-3xl text-[#14b8a6]">✨</span>
+              <h2
+                style={{ 
+                  fontFamily: "var(--font-fredoka)",
+                  textShadow: "4px 4px 0px rgba(20,184,166,0.3), 2px 2px 0px rgba(148,163,184,0.2)"
+                }}
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-[#e5e5e5]"
+              >
+                DEMO REEL
+              </h2>
+              <span className="text-xl sm:text-2xl md:text-3xl text-[#14b8a6]">✨</span>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
+              className="w-full max-w-[900px] mx-auto aspect-video rounded-lg overflow-hidden shadow-[0_0_30px_rgba(20,184,166,0.2)]"
+            >
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/to4qxyxufh4"
+                title="Demo Reel"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </motion.div>
           </div>
         </section>
       </main>
