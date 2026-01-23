@@ -28,7 +28,7 @@ export default function About() {
             {/* Text content */}
             <div className="space-y-5 md:space-y-6 text-[#e5e5e5]/90 text-base sm:text-lg md:text-xl leading-relaxed" style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>
               <p>
-                Hi! I'm Hadil, a junior at Stanford studying Electrical Engineering with a focus on graphics and visual computing. I'm also doing a coterm Master's in Computer Graphics.
+                Hi! I'm Hadil, a junior at Stanford studying Electrical Engineering on the hardware and software track. I'm also doing a coterm in CS with focus on graphics and visual computing.
               </p>
               
               <p>
